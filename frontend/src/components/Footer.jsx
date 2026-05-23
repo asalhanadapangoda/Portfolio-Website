@@ -16,7 +16,6 @@ export default function Footer() {
         <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
           <div className="text-center md:text-left">
             <p className="font-display text-xl font-bold gradient-text">{personalInfo.name}</p>
-            <p className="mt-1 text-sm text-zinc-500">Software Engineering Undergraduate · GPA 3.74</p>
           </div>
 
           <nav className="flex max-w-full flex-wrap justify-center gap-x-4 gap-y-2 sm:gap-6">
@@ -52,11 +51,8 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-zinc-800/50 pt-8 text-sm text-zinc-500 md:flex-row light:border-zinc-200">
-          <p>© {year} {personalInfo.name}. All rights reserved.</p>
-          <p className="flex items-center gap-1 text-center">
-            Built with <FaHeart className="text-red-400" /> using React & Tailwind
-          </p>
+        <div className="mt-10 flex flex-col items-center justify-center gap-4 border-t border-zinc-800/50 pt-8 text-sm text-zinc-500 md:flex-row light:border-zinc-200">
+          <p className="w-full text-center">© {year} {personalInfo.name}. All rights reserved.</p>
         </div>
       </div>
     </footer>
