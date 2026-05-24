@@ -9,8 +9,8 @@ export const personalInfo = {
   gitlab: 'https://gitlab.com/asalhanadapangoda',
   linkedin: 'https://www.linkedin.com/in/asal-handapangoda',
   location: 'Horana, Western Province, Sri Lanka',
-  profileImage: '/profile.png',
-  cvUrl: '/cv.pdf',
+  profileImage: import.meta.env.BASE_URL + 'profile.png',
+  cvUrl: import.meta.env.BASE_URL + 'cv.pdf',
   headline: 'B.Sc (Hons) Software Engineering — GPA 3.74 · University of Kelaniya',
   summary:
     'Results-driven Software Engineering undergraduate with a strong foundation in software development, Artificial Intelligence, and Machine Learning. Skilled in problem-solving, analytical thinking, and collaborative teamwork, with a passion for developing innovative technology solutions for real-world challenges.',
