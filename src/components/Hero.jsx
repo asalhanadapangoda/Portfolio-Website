@@ -21,7 +21,7 @@ export default function Hero() {
         <div className="absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-500/10 blur-[100px]" />
       </div>
 
-      <div className="section-padding relative z-10 w-full">
+      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
           <div className="order-2 text-center lg:order-1 lg:text-left">
             <motion.div
@@ -164,23 +164,6 @@ export default function Hero() {
 
           <div className="order-1 flex flex-col items-center lg:order-2">
             <ProfileImage size="xl" className="mx-auto" />
-
-            <motion.ul
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.1 }}
-              className="mt-6 w-full max-w-md space-y-2 px-1 sm:mt-8"
-            >
-              {highlights.map((item) => (
-                <li
-                  key={item}
-                  className="glass flex items-center gap-3 rounded-xl px-4 py-2.5 text-left text-sm text-zinc-300 light:text-zinc-700"
-                >
-                  <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-gradient-to-r from-cyan-400 to-purple-500" />
-                  {item}
-                </li>
-              ))}
-            </motion.ul>
           </div>
         </div>
 

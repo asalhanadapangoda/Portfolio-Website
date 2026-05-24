@@ -1,10 +1,11 @@
-import { FaGithub, FaGitlab, FaLinkedin, FaHeart } from 'react-icons/fa';
+import { FaGithub, FaGitlab, FaLinkedin, FaHeart, FaMedium } from 'react-icons/fa';
 import { personalInfo, socialLinks, navLinks } from '../data/portfolio';
 
 const iconMap = {
   github: FaGithub,
   gitlab: FaGitlab,
   linkedin: FaLinkedin,
+  medium: FaMedium,
 };
 
 export default function Footer() {

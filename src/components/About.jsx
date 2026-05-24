@@ -25,21 +25,6 @@ export default function About() {
       ),
     },
     {
-      icon: HiOfficeBuilding,
-      title: 'Advanced Level',
-      content: (
-        <>
-          <p className="font-semibold text-white light:text-zinc-900">
-            {aboutContent.secondaryEducation.school}
-          </p>
-          <p className="mt-2 text-sm text-zinc-400 light:text-zinc-600">
-            {aboutContent.secondaryEducation.grades}
-          </p>
-          <p className="mt-1 text-sm text-cyan-400">{aboutContent.secondaryEducation.zScore}</p>
-        </>
-      ),
-    },
-    {
       icon: HiLightningBolt,
       title: 'Soft Skills',
       content: (
@@ -108,9 +93,7 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
-                className={`glass group rounded-2xl p-6 transition hover:border-cyan-500/30 ${
-                  card.title === 'Soft Skills' ? 'sm:col-span-2' : ''
-                }`}
+                className="glass group rounded-2xl p-6 transition hover:border-cyan-500/30"
               >
                 <div className="mb-4 flex items-center gap-3">
                   <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-500/20 to-purple-500/20 text-cyan-400">

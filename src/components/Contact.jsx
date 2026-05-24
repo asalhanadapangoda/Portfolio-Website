@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaGithub, FaGitlab, FaLinkedin, FaTwitter, FaEnvelope } from 'react-icons/fa';
+import { FaGithub, FaGitlab, FaLinkedin, FaTwitter, FaEnvelope, FaMedium } from 'react-icons/fa';
 import { HiMail, HiUser, HiChat, HiPhone } from 'react-icons/hi';
 import SectionHeading from './SectionHeading';
 import { personalInfo, socialLinks } from '../data/portfolio';
@@ -9,6 +9,7 @@ const iconComponents = {
   github: FaGithub,
   gitlab: FaGitlab,
   linkedin: FaLinkedin,
+  medium: FaMedium,
   email: FaEnvelope,
 };
 
@@ -37,12 +38,46 @@ export default function Contact() {
     if (!validate()) return;
 
     setSending(true);
-    await new Promise((r) => setTimeout(r, 1200));
-    setSending(false);
-    setSubmitted(true);
-    setForm({ name: '', email: '', message: '' });
+    setErrors({});
 
-    setTimeout(() => setSubmitted(false), 5000);
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          message: form.message,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.success !== false) {
+        setSubmitted(true);
+        setForm({ name: '', email: '', message: '' });
+        setTimeout(() => setSubmitted(false), 5000);
+      } else {
+        throw new Error(data.error || 'Server error');
+      }
+    } catch (err) {
+      console.error('Mail submission error:', err);
+      // Fallback: trigger native mailto link so the message is never lost!
+      const mailtoUrl = `mailto:${personalInfo.email}?subject=${encodeURIComponent(
+        `New Portfolio Message from ${form.name}`
+      )}&body=${encodeURIComponent(
+        `Sender Name: ${form.name}\nSender Email: ${form.email}\n\nMessage:\n${form.message}`
+      )}`;
+      
+      // Let the user know we are opening their email client
+      alert('The contact server is currently undergoing maintenance. Opening your email app to send the message directly!');
+      window.location.href = mailtoUrl;
+    } finally {
+      setSending(false);
+    }
   };
 
   const handleChange = (e) => {
@@ -179,6 +214,10 @@ export default function Contact() {
                   />
                   {errors.message && <p className="mt-1 text-xs text-red-400">{errors.message}</p>}
                 </div>
+
+                {errors.submit && (
+                  <p className="text-sm text-red-400 text-center">{errors.submit}</p>
+                )}
 
                 <button
                   type="submit"

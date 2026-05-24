@@ -11,7 +11,7 @@ export const personalInfo = {
   location: 'Horana, Western Province, Sri Lanka',
   profileImage: import.meta.env.BASE_URL + 'profile.png',
   cvUrl: import.meta.env.BASE_URL + 'cv.pdf',
-  headline: 'B.Sc (Hons) Software Engineering — GPA 3.74 · University of Kelaniya',
+  headline: 'B.Sc (Hons) Software Engineering · University of Kelaniya',
   summary:
     'Results-driven Software Engineering undergraduate with a strong foundation in software development, Artificial Intelligence, and Machine Learning. Skilled in problem-solving, analytical thinking, and collaborative teamwork, with a passion for developing innovative technology solutions for real-world challenges.',
   languages: ['English', 'Sinhala'],
@@ -25,16 +25,13 @@ export const personalInfo = {
 
 export const typingRoles = [
   'Full Stack Developer',
-  'Backend Developer',
   'AI & ML Enthusiast',
-  'Project Coordinator',
 ];
 
 export const highlights = [
-  'GPA 3.74 — B.Sc (Hons) Software Engineering',
+  'B.Sc (Hons) Software Engineering',
   'Junior Hackathon — 1st Runner-Up (Smart Diet SL)',
   'IEEE Young Professionals — Best Member Coordinator 2025',
-  'Project Coordinator @ TRACE Sri Lanka',
 ];
 
 export const aboutContent = {
@@ -46,12 +43,6 @@ export const aboutContent = {
     gpa: '3.74',
     details:
       'Domains: Data Science & Engineering, Health Informatics, Business Engineering Applications.',
-  },
-  secondaryEducation: {
-    school: 'Taxila Central College',
-    period: 'G.C.E. Advanced Level',
-    grades: '1 A (Combined Mathematics) · 2 B passes',
-    zScore: 'Z-Score: 1.5080',
   },
   softSkills: [
     'Problem Solving & Critical Thinking',
@@ -109,6 +100,7 @@ export const skills = [
   { name: 'Java', level: 92, icon: 'java' },
   { name: 'React', level: 90, icon: 'react' },
   { name: 'Spring Boot', level: 88, icon: 'spring' },
+  { name: 'MySQL', level: 90, icon: 'mysql' },
   { name: 'Node.js', level: 86, icon: 'node' },
   { name: 'JavaScript', level: 90, icon: 'javascript' },
   { name: 'Python', level: 85, icon: 'python' },
@@ -198,7 +190,7 @@ export const navLinks = [
   { href: '#skills', label: 'Skills' },
   { href: '#projects', label: 'Projects' },
   { href: '#experience', label: 'Experience' },
-  { href: '#certifications', label: 'Certs' },
+  { href: '#certifications', label: 'Certificates' },
   { href: '#contact', label: 'Contact' },
 ];
 
@@ -206,5 +198,6 @@ export const socialLinks = [
   { name: 'GitHub', url: 'https://github.com/asalhanadapangoda', icon: 'github' },
   { name: 'GitLab', url: 'https://gitlab.com/asalhanadapangoda', icon: 'gitlab' },
   { name: 'LinkedIn', url: 'https://www.linkedin.com/in/asal-handapangoda', icon: 'linkedin' },
+  { name: 'Medium', url: 'https://medium.com/@asalhimsanda', icon: 'medium' },
   { name: 'Email', url: 'mailto:asalhimsanda@gmail.com', icon: 'email' },
 ];
