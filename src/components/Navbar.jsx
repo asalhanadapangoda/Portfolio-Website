@@ -38,11 +38,12 @@ export default function Navbar() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, delay: 0.2 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-[9999] transition-all duration-300 ${
         scrolled
-          ? 'glass shadow-lg shadow-black/5 py-3'
+          ? 'nav-scrolled shadow-lg shadow-black/5 py-3'
           : 'bg-transparent py-5'
       }`}
+      style={{ zIndex: 9999 }}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <a
