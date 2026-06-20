@@ -163,6 +163,24 @@ export const projects = [
 
   // ─── AI / ML ───────────────────────────────────────────────────────
   {
+    id: 'animasense-ai',
+    name: 'AnimaSense AI • Cat & Dog Classifier',
+    repo: 'cat-dog-classifier',
+    type: 'Individual',
+    description:
+      'Web & AI application designed to classify photos of cats and dogs using a pre-trained MobileNetV2 CNN, featuring a premium glassmorphic dark-mode web interface.',
+    category: 'ai-ml',
+    language: 'Python',
+    technologies: ['React', 'Python', 'Flask', 'TensorFlow', 'MobileNetV2', 'OpenCV'],
+    github: `${GITHUB}/cat-dog-classifier`,
+    gitlab: null,
+    demo: null,
+    gradient: 'from-orange-500/20 to-blue-600/20',
+    icon: '🐾',
+    featured: true,
+    highlight: 'Individual · Deep Learning Classifier',
+  },
+  {
     id: 'crop-decision-support',
     name: 'AgroSense — Crop Recommendation System',
     repo: 'Crop-Decision-Support-System',
