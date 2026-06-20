@@ -118,16 +118,7 @@ export const experience = [
     description:
       'Coordinating innovation and community projects at a nonprofit tech hub — connecting startups, students, and partners to strengthen Sri Lanka\'s technology ecosystem.',
   },
-  {
-    title: 'Technical Lead',
-    organization: 'The Day News Global',
-    period: 'Sep 2025 – Present',
-    employmentType: 'Part-time',
-    location: 'Colombo, Western Province, Sri Lanka',
-    workMode: 'Hybrid',
-    description:
-      'Leading technical direction for the MERN-based news and media platform — architecture, full-stack development, AI chatbot integration, security, and deployment of scalable production features.',
-  },
+
   {
     title: 'Backend Developer',
     organization: 'Sawiya Organization',
