@@ -25,8 +25,8 @@ export default function App() {
         }`}
       >
         <ParticleBackground />
+        <Navbar />
         <div className="relative z-10">
-          <Navbar />
           <main>
             <Hero />
             <About />
